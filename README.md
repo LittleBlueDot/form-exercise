@@ -1,5 +1,3 @@
-![GitHub top language](https://img.shields.io/github/languages/top/LittleBlueDot/form-exercise?color=green)
-
 # Form Exercise
 
 The exercise consist of 2 parts.

@@ -1,0 +1,16 @@
+.small {
+  //color: $orange;
+  color: darkred;
+  display: block;
+  line-height: 1.4;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid darkred;
+}
+
+label.required:after {
+  content:"*";
+  color:darkred;
+  margin-left: 2px;
+}

@@ -1,47 +1,96 @@
 <div class="container">
-    <h1 class="text-center mt-5">I'm an awesome <small class="text-muted">form!</small></h1>
-    <form (ngSubmit)="onSubmit()" [formGroup]="basicForm" class="row justify-content-center gap-3 mt-4">
-        <div class="col-12 col-md-8 col-xl-6">
-            <label class="form-label required" for="name">Name</label>
-            <input aria-describedby="nameHelp" class="form-control" formControlName="name" id="name"
-                   placeholder="Joe Dow" [class.invalid]="isInvalid('name')"
-                   type="text">
-            <span *ngIf="isInvalid('name')"
-                  class="small mt-2">Please enter your name.</span>
-        </div>
-        <div class="col-12 col-md-8 col-xl-6">
-            <label class="form-label required" for="email">Email</label>
-            <input aria-describedby="emailHelp" class="form-control" formControlName="email" id="email"
-                   placeholder="example@example.com" [class.invalid]="isInvalid('email')"
-                   type="email">
-            <span *ngIf="isInvalid('email')"
-                  class="small mt-2">Please enter a valid email.</span>
-        </div>
-        <div class="col-12 col-md-8 col-xl-6">
-            <label class="form-label required" for="birthdate">Birthdate</label>
-            <input aria-describedby="birthdateHelp" class="form-control" formControlName="birthdate" id="birthdate"
-                   type="date" [class.invalid]="isInvalid('birthdate')">
-            <span *ngIf="isInvalid('birthdate') || basicForm.get('birthdate').errors?.futureBirthdate"
-                  class="small mt-2">Please enter a valid birthdate (not in the future).</span>
-        </div>
-        <div class="col-12 col-md-8 col-xl-6">
-            <label class="form-label required" for="tel">Phone</label>
-            <input aria-describedby="telHelp" class="form-control" formControlName="phone" id="tel"
-                   placeholder="912345601"
-                   type="tel" [class.invalid]="isInvalid('phone')">
-            <span *ngIf="isInvalid('phone')"
-                  class="small mt-2">Please enter a valid, 9 digits phone number.</span>
-        </div>
-        <div class="col-12 col-md-8 col-xl-6">
-            <label class="form-label required" for="taxNumber">Tax number (NIF)</label>
-            <input aria-describedby="taxHelp" class="form-control" formControlName="taxNumber" id="taxNumber"
-                   placeholder="Insert a valid portuguese NIF" type="text" [class.invalid]="isInvalid('taxNumber')">
-            <span *ngIf="isInvalid('taxNumber')"
-                  class="small mt-2">Please enter a valid, 9 digits Portuguese taxpayers number - <strong>Número de Identificação Fiscal (NIF).</strong></span>
-        </div>
-        <div class="d-grid mt-3 col-12 col-md-8 col-xl-6 mx-auto">
-            <button class="btn btn-primary" type="submit">Submit</button>
-        </div>
-    </form>
+  <h1 class="text-center mt-5">
+    I'm an awesome <small class="text-muted">form!</small>
+  </h1>
+  <form
+    (ngSubmit)="onSubmit()"
+    [formGroup]="basicForm"
+    class="row justify-content-center gap-3 mt-4"
+  >
+    <div class="col-12 col-md-8 col-xl-6">
+      <label class="form-label required" for="name">Name</label>
+      <input
+        aria-describedby="nameHelp"
+        class="form-control"
+        formControlName="name"
+        id="name"
+        placeholder="Joe Dow"
+        [class.invalid]="isInvalid('name')"
+        type="text"
+      />
+      <span *ngIf="isInvalid('name')" class="small mt-2"
+        >Please enter your name.</span
+      >
+    </div>
+    <div class="col-12 col-md-8 col-xl-6">
+      <label class="form-label required" for="email">Email</label>
+      <input
+        aria-describedby="emailHelp"
+        class="form-control"
+        formControlName="email"
+        id="email"
+        placeholder="example@example.com"
+        [class.invalid]="isInvalid('email')"
+        type="email"
+      />
+      <span *ngIf="isInvalid('email')" class="small mt-2"
+        >Please enter a valid email.</span
+      >
+    </div>
+    <div class="col-12 col-md-8 col-xl-6">
+      <label class="form-label required" for="birthdate">Birthdate</label>
+      <input
+        aria-describedby="birthdateHelp"
+        class="form-control"
+        formControlName="birthdate"
+        id="birthdate"
+        type="date"
+        [class.invalid]="isInvalid('birthdate')"
+      />
+      <span
+        *ngIf="
+          isInvalid('birthdate') ||
+          basicForm.get('birthdate').errors?.futureBirthdate
+        "
+        class="small mt-2"
+        >Please enter a valid birthdate (not in the future).</span
+      >
+    </div>
+    <div class="col-12 col-md-8 col-xl-6">
+      <label class="form-label required" for="tel">Phone</label>
+      <input
+        aria-describedby="telHelp"
+        class="form-control"
+        formControlName="phone"
+        id="tel"
+        placeholder="912345601"
+        type="tel"
+        [class.invalid]="isInvalid('phone')"
+      />
+      <span *ngIf="isInvalid('phone')" class="small mt-2"
+        >Please enter a valid, 9 digits phone number.</span
+      >
+    </div>
+    <div class="col-12 col-md-8 col-xl-6">
+      <label class="form-label required" for="taxNumber"
+        >Tax number (NIF)</label
+      >
+      <input
+        aria-describedby="taxHelp"
+        class="form-control"
+        formControlName="taxNumber"
+        id="taxNumber"
+        placeholder="Insert a valid portuguese NIF"
+        type="text"
+        [class.invalid]="isInvalid('taxNumber')"
+      />
+      <span *ngIf="isInvalid('taxNumber')" class="small mt-2"
+        >Please enter a valid, 9 digits Portuguese taxpayers number -
+        <strong>Número de Identificação Fiscal (NIF).</strong></span
+      >
+    </div>
+    <div class="d-grid mt-3 col-12 col-md-8 col-xl-6 mx-auto">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
 </div>
-<!-- <app-rating-input></app-rating-input> -->

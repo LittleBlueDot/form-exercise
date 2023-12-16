@@ -4,22 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
-// import { RatingInputComponent } from './rating-input/rating-input.component';
-// import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        FormComponent,
-        // RatingInputComponent,
-        // DropdownComponent,
-    ],
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent, FormComponent],
+  imports: [BrowserModule, ReactiveFormsModule],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

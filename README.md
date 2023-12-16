@@ -1,8 +1,5 @@
-# Form Exercise 
+# Form Exercise
 
-The exercise consist of 2 parts.
-
-### First part
 Build a form using Angular's **ReactiveForms** approach with the following structure:
 
 - Name
@@ -29,14 +26,6 @@ When submitting, the fields with invalid values should appear with a red backgro
 If all fields are valid, the page should refresh.
 
 The exercise uses Bootstrap 5.
-
-### Second part
-Build a custom Dropdown component that implements Angular's **ControlValueAccessor** interface.
-
-Add a new field "Country" into the form, which uses the custom Dropdown component.
-The "Country" field is required.
-
-**This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.**
 
 ## Development server
 
